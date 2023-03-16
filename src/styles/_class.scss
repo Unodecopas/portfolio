@@ -1,0 +1,141 @@
+@import "./mixins.scss";
+@import "./colors";
+// Margins
+@include list-loop(".m-", "margin");
+@include list-loop(".mt-", "margin-top");
+@include list-loop(".mb-", "margin-bottom");
+@include list-loop(".ml-", "margin-left");
+@include list-loop(".mr-", "margin-right");
+.m {
+  &-auto {
+    margin: auto;
+  }
+  &x {
+    &-auto {
+      margin: 0 auto;
+    }
+  }
+  &y {
+    &-auto {
+      margin: auto 0;
+    }
+  }
+}
+
+// Paddings
+@include list-loop(".p-", "padding");
+@include list-loop(".pt-", "padding-top");
+@include list-loop(".pb-", "padding-bottom");
+@include list-loop(".pl-", "padding-left");
+@include list-loop(".pr-", "padding-right");
+.p {
+  &-auto {
+    margin: auto;
+  }
+  &x {
+    &-auto {
+      margin: 0 auto;
+    }
+  }
+  &y {
+    &-auto {
+      margin: auto 0;
+    }
+  }
+}
+
+// Gap
+@include list-loop(".gap-", "gap");
+
+// Displays
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  width: 100%;
+  max-width: 1500px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 5px;
+}
+
+.pcenter {
+  place-items: center;
+}
+.between {
+  justify-content: space-between;
+}
+.j {
+  &center {
+    justify-content: center;
+  }
+}
+
+// Widths && Heights
+.wfull {
+  width: 100%;
+}
+.hfull {
+  height: 100%;
+}
+.grow {
+  flex-grow: 1;
+}
+
+// Borders
+
+.border {
+  &-top {
+    border-top: 1px solid $colored;
+  }
+  &-bottom {
+    border-bottom: 1px solid $colored;
+  }
+}
+
+// Colors
+.shop-icon {
+  position: relative;
+}
+.badge {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  display: inline-table;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  &-content {
+    color: $light;
+    font-size: 0.8rem;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+.t {
+  &center {
+    text-align: center;
+  }
+  &light {
+    color: $light;
+  }
+  &bold {
+    font-weight: bold;
+  }
+}
+.debug {
+  border: 2px solid red;
+}
+.colored {
+  color: $colored !important;
+}

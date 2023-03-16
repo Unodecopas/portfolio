@@ -1,0 +1,14 @@
+$max: 8;
+$offset: 1;
+$unit: "rem";
+$value: 0.25;
+
+@mixin list-loop($className, $styleName) {
+  $i: 0;
+  @while $i <= $max {
+    #{$className + $i} {
+      #{$styleName}: #{$value * $i + $unit};
+    }
+    $i: $i + $offset;
+  }
+}

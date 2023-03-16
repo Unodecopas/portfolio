@@ -1,0 +1,95 @@
+@import "./styles/colors";
+@import "./styles/class";
+@import "./styles/mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+  border: 12px solid black;
+  background-image: url("./assets/fondo.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.desktop {
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(1px 1px #18692c);
+}
+.windows-task {
+  font-family: "Trebuchet MS";
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 13px;
+  text-shadow: 1px 1px #0f1089;
+  & .start {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: white;
+    display: flex;
+    background: linear-gradient(
+      180deg,
+      #26eb50,
+      #18a824 8%,
+      #139e31 40%,
+      rgb(25, 155, 46) 88%,
+      #18692c
+    );
+    padding: 0.5rem 1rem;
+    & .icon {
+      width: 15px;
+      height: 15px;
+      filter: drop-shadow(1px 1px #18692c);
+    }
+  }
+  & .taskbar {
+    display: flex;
+    background-color: blue;
+    color: white;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    // padding: 1.25rem 1rem;
+    font-family: Trebuchet MS;
+    background: linear-gradient(
+      180deg,
+      #0997ff,
+      #0053ee 8%,
+      #0050ee 40%,
+      #06f 88%,
+      #06f 93%,
+      #005bff 95%,
+      #003dd7 96%,
+      #003dd7
+    );
+    & .apps {
+      flex-grow: 1;
+    }
+  }
+}
+
+.program {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  color: #eee;
+  text-shadow: 1px 1px black;
+}
